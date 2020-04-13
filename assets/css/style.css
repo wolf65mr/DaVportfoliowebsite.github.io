@@ -866,6 +866,10 @@ button::-moz-focus-inner
     .first {
     	margin-left: 20%;
     }
+
+    .section__maintitle {
+    	white-space: normal;
+    }
 }
 
 @media screen and (max-width: 360px) {
