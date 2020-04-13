@@ -1,382 +1,95 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ru">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script src="https://kit.fontawesome.com/3b4fe31b93.js" crossorigin="anonymous"></script>
-
-    <title>WebSite</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Форма обратной связи на AJAX</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+		 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script >
+		 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->  
   </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <div class="header__inner">
+<body>
+	
+<style>#message{padding-top:50px;padding-bottom:70px;background-color:#f8f8f8;border-top:1px solid #e5e5e5}#message h2{margin-bottom:30px}#message h2 span{border-bottom:5px solid #ed1d25}#message label{color:#666;margin-bottom:10px;font-size:1.2em}#message #form_email,#message #form_message,#message #form_name{box-sizing:border-box;border:1px solid #fff;box-shadow:none}#message #form_email,#message #form_name{padding:25px;border:1px solid #ccc;font-size:1.1em}#message #form_message{height:249px;padding:25px;border:1px solid #ccc;font-size:1.2em}#message #button_contacts{background:#666;padding:15px 0;width:100%;border:2px solid #666;color:#fff;cursor:pointer;font-size:1.3em;text-transform:uppercase;transition:background .6s,color .6s}#message #button_contacts:hover{background:0 0;color:#666}</style>  
 
-          <a href="home.html" class="header__logo">YourLogo</a>
-
-          <nav class="menu">
-            <ul class="header__menu">
-              <li class="menu-element"><a href="#" class="header__link">Отзывы</a></li>
-              <li class="menu-element"><a href="#" class="header__link">Контакты</a></li>
-              <li class="menu-element"><a href="index.html" class="header__link">Написать нам!</a></li>
-              <li class="menu-element"><a href="tel: +8495-142-85-53" class="header__link calling">Позвонить нам!</a></li>
-            </ul>
-          </nav>
-
-        <div id="sidebar" class="height">
-       <div id="menu-gamburger" onclick="openMenu()" id="menu-gamburger">
-       <span class="line"></span>
-      </div>
-
-      <nav class="sidebar__menu">
-        <div class="sidebar__header">
-          <a href="home.html" class="logo">YourLogo</a>
-          <a href="tel: +8495-142-85-53" class="header__link calling left">Позвонить</a>
-        </div>
-        <div class="main-menu">
-          <p class="text bold">Ремонтируем</p>
-          <p class="text">Всю продукцию Apple</p>
-        </div>
-        <p></p>
-        <div class="main-menu">
-          <a href="#" class="links">Скидки</a>
-          <a href="#" class="links">Товары</a>
-          <a href="#" class="links">Помощь</a>
-        </div>
-      </nav>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </header>
-
-    <div class="intro">
-      <div class="container">
-        <div class="intro__inner">
-          
-          <h1 class="intro__title">Сервисный центр<br>Apple в Москве</h1>
-          <h3 class="intro__subtitle">Выезжаем к вам и ремонтируем <span style="color: #ff0000">в любое время суток</span></h3>
-
-          <a href="index.html" class="intro__btn">Ремонтировать</a>
-
-          <a href="maps.html" class="intro__btn normal">Наши центры</a>
-
-        </div>
-      </div>
-    </div>
-
-    <section class="section">
-      <div class="container">
-        <div class="section__inner">
-          
-          <div class="section__item">
-            <img src="assets/img/section/1.png" class="section__img">
-            <h3 class="section__title">Выезжаем</h3>
-            <p class="section__subtitle">За чем тратить ваше драгоценное время,<br>
-            мы сами к вам приедем</p>
-          </div>
-
-          <div class="section__item">
-            <img src="assets/img/section/2.png" class="section__img">
-            <h3 class="section__title">Ремонтируем</h3>
-            <p class="section__subtitle">15 минут примерно постоите
-            рядышком и все — готово.</p>
-          </div>
-
-          <div class="section__item">
-            <img src="assets/img/section/3.png" class="section__img">
-            <h3 class="section__title">Довольны вы, а это главное</h3>
-            <p class="section__subtitle">Пока вы радуетесь сделанному
-            устройству, мы вам еще гарантию вручим.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-
-        <div class="active">
-        <div class="row">
-          <div class="col-6 item-6"><a href="#"><img class="section__img radius section__img-hover" src="assets/img/section-1/1.png"></a></div>
-          <div class="col-6 item-6"><a href="#" ><img class="section__img section__img-hover" src="assets/img/section-1/iPad.png"></a><br><p><div class="col-16 item_6 col-14"><a href="#" ><img class="section__img section__img-hover" src="assets/img/section-1/MacBook.png"></a></div></p></div>
-        </div>
-
-        <div class="row">
-          <div class="col-6 item-6"><a href="#" ><img class="section__img section__img-hover" src="assets/img/section-1/iMac.png"></a></div>
-          <div class="col-3 item-3"><a href="#"><img class="section__img section__img-hover" src="assets/img/section-1/MacMini.png"></a></div>
-          <div class="col-3 item-3"><a href="#" ><img class="section__img section__img-hover" src="assets/img/section-1/MacPro.png"></a></div>
-        </div>
-        </div>
-
-        <div class="disable">
-          <div class="row">
-            <div class="col-12"><img class="section__img radius section__img-hover" src="assets/img/section-1/1.png"></div>
-          </div>
-          <div class="row">
-            <div class="col-12"><img class="section__img radius section__img-hover" src="assets/img/section-1/iPad.png"></div>
-          </div>
-          <div class="row">
-            <div class="col-12"><img class="section__img radius section__img-hover" src="assets/img/section-1/MacBook.png"></div>
-          </div>
-          <div class="row">
-            <div class="col-12"><img class="section__img radius section__img-hover" src="assets/img/section-1/iMac.png"></div>
-          </div>
-          <div class="row">
-            <div class="col-12"><img class="section__img radius section__img-hover" src="assets/img/section-1/MacMini.png"></div>
-          </div>
-          <div class="row">
-            <div class="col-12"><img class="section__img radius section__img-hover" src="assets/img/section-1/MacPro.png"></div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2 class="section__maintitle">Удобство и надежность</h2>
-        <div class="section__inner">
-          
-          <div class="section__item ">
-            <img src="assets/img/section-2/1.png" class="secton__img first">
-            <p class="section__subtitle margin" style="text-align: center;">Используем только<br> <span style="font-weight: bold;">оригинальные</span> запчасти</p>
-          </div>
-
-          <div class="section__item center">
-            <img src="assets/img/section-2/2.png" class="secton__img center">
-            <p class="section__subtitle margin" style="text-align: center;">Выезжаем по всей <span style="font-weight: bold;">Москве и<br> области</span></p>
-          </div>
-
-          <div class="section__item align">
-            <img src="assets/img/section-2/3.png" class="secton__img last">
-            <p class="section__subtitle margin" style="text-align: center;"><span style="font-weight: bold;">Бесплатный</span> выезд мастера<br> или доставка в сервис</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="section section__bg">
-      <div class="container">
-          <div class="section_new">
-            
-            <h2 class="section__title-main">Новым клиентам<br> 
-            до 12 апреля</h2>
-
-            <a href="index.html" class="intro__btn normal-black">Ремонтировать</a>
-
-            <a href="maps.html" class="intro__btn normal">Наши центры</a>
-
-          </div>
-        </div>
-    </section>
-
-    <section class="section orange">
-      <div class="container">
-
-        <h2 class="section__maintitle title-black">Остались вопросы?</h2>
-
-        <h3 class="section__mainsubtitle">Звоните <a class="white" href="tel: +8495-142-85-53">+8495-142-85-53<img class="sec-calling" src="assets/img/section-4/1.png"></a></h3>
-
-        <div class="section__inner">
-          <div class="section__item flex">
-            <i class="fas fa-check" style="color: #fff; margin-right: 10px;"></i>
-            <p class="section__subtitle subtitle-bold">Выезжаем по Москве</p>
-          </div>
-          <div class="section__item flex">
-            <i class="fas fa-check" style="color: #fff; margin-right: 10px;"></i>
-            <p class="section__subtitle subtitle-bold">Ремонтируем за 15 минут</p>
-          </div>
-          <div class="section__item flex">
-            <i class="fas fa-check" style="color: #fff; margin-right: 10px;"></i>
-            <p class="section__subtitle subtitle-bold">Со скидкой 25%</p>
-          </div>
-        </div>
-
-        <a href="index.html" class="intro__btn normal-black top">Ремонтировать</a>
-
-        <a href="maps.html" class="intro__btn normal top">Наши центры</a>
-
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-
-        <p class="section__text">Сервисный центр Spets Apple специализируется на ремонте и обслуживании продукции Apple: iPhone, iPad, iPod, Mac, Macbook. Наши специалисты знают все об устройствах известного американского бренда и слабых местах этой техники. Высокий профессионализм наших специалистов и постоянное повышение квалификации – вот основы нашей работы, благодаря чему мастера способны выполнять ремонт любой сложности.
-
-        Вы привыкли, что гаджеты под маркой Apple надежные и удобные в эксплуатации? Мы предлагаем такой же простой и удобный сервис по ремонту и обслуживанию! Завышать цены – не в наших правилах, каким бы сложным не оказался ремонт. На собственном складе всегда содержится необходимый запас оригинальных запчастей на устройства любых моделей и поколений. Это дает возможность ремонтировать технику в самые короткие сроки. Работаем выездом по Москве и Московской области.
-        </p>
-        
-        <h3 class="section__title-bold">Простая схема ремонта Apple</h3>
-
-        <p class="section__text">Выполним ремонт Apple всего за несколько шагов. Оформите заявку онлайн или позвоните в наш сервисный центр по телефону 8 (495) 128-48-93. В скором времени вам перезвонит наш сотрудник и поможет оформить заказ. В течение часа к вам домой или в офис приедет мастер. Он выполнит бесплатную диагностику, сообщит об обнаруженных неисправностях и назовет стоимость работ с учетом цены услуг и запчастей. Клиент в праве отказаться от ремонта до его начала, при этом платить за диагностику не нужно. Даем гарантию на все виды работ!</p>
-
-      </div>
-    </section>
-
-    <!-- Footer -->
-<footer style="background: #3e4551; color: #fff;" class="page-footer font-small stylish-color-dark pt-4">
-
-  <!-- Footer Links -->
-  <div class="container text-center text-md-left">
-
-    <!-- Grid row -->
+<section id="message">
+  <div class="container">
     <div class="row">
-
-      <!-- Grid column -->
-      <div class="col-md-4 mx-auto">
-
-        <!-- Content -->
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
-        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-          consectetur
-          adipisicing elit.</p>
-
+      <div class="col-md-12">
+        <h2><span>Форма</span> обратной связи</h2>
+         <div id="contact-form">        
+           <div class="controls">
+             <div class="row">
+               <div class="col-md-6">
+                 <div class="form-group">
+                   <label for="form_email">Ваш Email *</label>
+                    <input id="form_email" type="email" class="form-control" placeholder="Введите адрес электронной почты*" required="" data-error="Требуется действующее электронное письмо.">
+                   <div class="help-block with-errors"></div>
+                 </div>
+               </div>
+               <div class="col-md-6">
+                 <div class="form-group">
+                   <label for="form_name">Ваше имя *</label>
+                    <input id="form_name" type="text" class="form-control" required="" placeholder="Как к Вам обращаться?">
+                   <div class="help-block with-errors"></div>
+                 </div>
+               </div>
+             </div>
+             <div class="row">
+                 <div class="col-md-12 checkbox-data">
+                     <label>
+                         <input type="checkbox" checked="checked" id="person_data" required="">
+                         <i class="fa fa-2x icon-checkbox"></i>
+                         <span>Подтверждаю согласие на обработку <a href="#" target="_blank">персональных данных</a></span>
+                     </label>
+                 </div>
+             </div>
+             <div class="row">
+               <div class="col-md-12">
+                 <div class="form-group">
+                    <textarea id="form_message" name="text_comment" class="form-control" placeholder="Пожалуйста, оставьте сообщение" rows="4" required="" data-error="Пожалуйста, оставьте нам сообщение."></textarea>
+                   <div class="help-block with-errors"></div>
+                 </div>
+                 <div class="messages"></div>
+               </div>          
+               <div class="col-md-12 text-center">
+                  <input type="submit" name="btn_submit" id="button_contacts" value="Отправить сообщение">
+               </div>
+             </div>
+           </div>
+         </div>
+        </div>
       </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 mx-auto">
-
-        <!-- Links -->
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a class="footer__link" href="#!">Link 1</a>
-          </li>
-          <li>
-            <a class="footer__link" href="#!">Link 2</a>
-          </li>
-          <li>
-            <a class="footer__link" href="#!">Link 3</a>
-          </li>
-          <li>
-            <a class="footer__link" href="#!">Link 4</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 mx-auto">
-
-        <!-- Links -->
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a class="footer__link" href="#!">Link 1</a>
-          </li>
-          <li>
-            <a class="footer__link" href="#!">Link 2</a>
-          </li>
-          <li>
-            <a class="footer__link" href="#!">Link 3</a>
-          </li>
-          <li>
-            <a class="footer__link" href="#!">Link 4</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 mx-auto">
-
-        <!-- Links -->
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a class="footer__link" href="#!">Link 1</a>
-          </li>
-          <li>
-            <a class="footer__link" href="#!">Link 2</a>
-          </li>
-          <li>
-            <a class="footer__link" href="#!">Link 3</a>
-          </li>
-          <li>
-            <a class="footer__link" href="#!">Link 4</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
     </div>
-    <!-- Grid row -->
+</section>
 
-  </div>
-  <!-- Footer Links -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="js/bootstrap.js"></script>	
+   <script>
+     $(document).ready(function(){
+            $('#button_contacts').click(function(){
+                var form_name   = $('#form_name').val();
+                var form_email   = $('#form_email').val();
+                var form_message = $('#form_message').val();
+                $.ajax({
+                    url: "post.php", 
+                    type: "post", 
+                    dataType: "json", 
+                    data: { 
+                        "form_name":   form_name,
+                        "form_email":   form_email,
+                        "form_message": form_message
+                    },
+                    success: function(data){
+                        $('.messages').html(data.result); 
+                    }
+                });
+            });
+        });
+   </script> 
 
-  <hr>
-
-  <!-- Social buttons -->
-  <ul class="list-unstyled list-inline text-center">
-    <li class="list-inline-item">
-      <a href="#" class="btn-floating btn-fb mx-1 footer__link">
-        <i class="fab fa-facebook-f"> </i>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a href="#" class="btn-floating btn-tw mx-1 footer__link">
-        <i class="fab fa-twitter"> </i>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a href="#" class="btn-floating btn-gplus mx-1 footer__link">
-        <i class="fab fa-google-plus-g"> </i>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a  href="#" class="btn-floating btn-li mx-1 footer__link">
-        <i class="fab fa-linkedin-in"> </i>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a href="#" class="btn-floating btn-dribbble mx-1 footer__link" >
-        <i class="fab fa-dribbble"> </i>
-      </a>
-    </li>
-  </ul>
-  <!-- Social buttons -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/" class="footer__link"> DaV Corporation</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="assets/js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>
