@@ -35,12 +35,12 @@
         // почта, на которую придет письмо
         $mail_to = "danilalarionov22@gmail.com"; 
         // тема письма
-        $subject = "Письмо с обратной связи";
+        $subject = "Письмо с вашего сайта";
          
         // заголовок письма
         $headers= "MIME-Version: 1.0\r\n";
         $headers .= "Content-type: text/html; charset=utf-8\r\n"; // кодировка письма
-        $headers .= "From: Название сайта <no-reply@test.com>\r\n"; // от кого письмо
+        $headers .= "From: Вам прислали сообщение с сайта <no-reply@test.com>\r\n"; // от кого письмо
          
         // отправляем письмо 
         mail($mail_to, $subject, $message, $headers);
