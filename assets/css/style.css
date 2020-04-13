@@ -746,8 +746,9 @@ button::-moz-focus-inner
     }
 
     .section__title-main {
-    	font-size: 20px;
-    	padding-bottom: 0;
+    	font-size: 30px;
+    	padding-bottom: 5px;
+    	margin-left: 15%;
     }
 
     .intro__btn {
@@ -756,10 +757,13 @@ button::-moz-focus-inner
 
     .normal {
     	border: 1px solid #fff;
+    	font-size: 13px;
     }
 
     .normal-black {
     	border: 1px solid #000;
+    	margin-left: 9%;
+    	font-size: 13px;
     }
 
     .title-black {
@@ -795,6 +799,10 @@ button::-moz-focus-inner
     .menu {
     	display: none;
     }
+
+    .section__bg {
+    	background-size: 100%;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -803,11 +811,15 @@ button::-moz-focus-inner
 	}
 
 	.intro__btn {
-		font-size: 5px;
+		font-size: 10px;
 	}
 
 	.intro__title {
-		font-size: 40px;
+		font-size: 30px;
+	}
+
+	.intro__subtitle {
+		margin-bottom: 10px;
 	}
 
     .section__title {
@@ -827,6 +839,19 @@ button::-moz-focus-inner
     }
 
     .section__mainsubtitle {
+    	font-size: 15px;
+    }
+
+    .logo{
+        font-size: 20px;
+    }
+
+    .left{
+    	margin-left: 10%;
+    	font-size: 15px;
+    }
+
+    .calling {
     	font-size: 15px;
     }
 }
