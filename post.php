@@ -33,7 +33,7 @@
     // функция отправки письма
     function send_mail($message){
         // почта, на которую придет письмо
-        $mail_to = "danilalarionov22@gmail.com"; 
+        $mail_to = "dmittelenkov@bk.ru"; 
         // тема письма
         $subject = "Письмо с вашего сайта";
          
