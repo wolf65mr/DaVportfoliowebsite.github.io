@@ -803,6 +803,14 @@ button::-moz-focus-inner
     .section__bg {
     	background-size: 100%;
     }
+
+    .section__subtitle {
+    	font-size: 30px;
+    }
+
+    .section__img {
+    	margin: 50px auto 0 auto;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -826,8 +834,8 @@ button::-moz-focus-inner
 	    font-size: 12px;
     }
 
-    .section__subtitle {
-	    font-size: 8px;
+     .section__subtitle {
+    	font-size: 30px;
     }
 
     .section__title-main {
@@ -853,6 +861,10 @@ button::-moz-focus-inner
 
     .calling {
     	font-size: 15px;
+    }
+
+    .first {
+    	margin-left: 20%;
     }
 }
 
